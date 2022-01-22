@@ -34,7 +34,7 @@ juce_add_plugin(MoniqueMonosynth
         COMPANY_COPYRIGHT "Copyright Thomas Arndt and Authors in Github, 2018-2021"
         COMPANY_WEBSITE "http://surge-synth-team.org"
 
-        ICON_BIG "${CMAKE_SOURCE_DIR}/Icon/monique_512x512.png"
+        ICON_BIG "${CMAKE_SOURCE_DIR}/resources/icon/monique_512x512.png"
 
         FORMATS ${MONIQUE_JUCE_FORMATS}
 
@@ -84,40 +84,40 @@ target_compile_definitions(${PROJECT_NAME}
 
 target_sources(${PROJECT_NAME}
   PRIVATE
-    Source/monique_core_Datastructures.cpp
-    Source/monique_core_Parameters.cpp
-    Source/monique_core_Processor.cpp
-    Source/monique_core_Synth.cpp
-    Source/monique_ui_AmpPainter.cpp
-    Source/monique_ui_Credits.cpp
-    Source/monique_ui_DragPad.cpp
-    Source/monique_ui_ENVPopup.cpp
-    Source/monique_ui_GlobalSettings.cpp
-    Source/monique_ui_LookAndFeel.cpp
-    Source/monique_ui_MFOPopup.cpp
-    Source/monique_ui_MIDIIO.cpp
-    Source/monique_ui_MainWindow.cpp
-    Source/monique_ui_MidiLearnPopup.cpp
-    Source/monique_ui_ModulationSlider.cpp
-    Source/monique_ui_Morph.cpp
-    Source/monique_ui_OptionPopup.cpp
-    Source/monique_ui_Overlay.cpp
-    Source/monique_ui_Playback.cpp
-    Source/monique_ui_Refresher.cpp
-    Source/monique_ui_SegmentedMeter.cpp
-    Source/mono_AudioDeviceManager.cpp
+    src/monique_core_Datastructures.cpp
+    src/monique_core_Parameters.cpp
+    src/monique_core_Processor.cpp
+    src/monique_core_Synth.cpp
+    src/monique_ui_AmpPainter.cpp
+    src/monique_ui_Credits.cpp
+    src/monique_ui_DragPad.cpp
+    src/monique_ui_ENVPopup.cpp
+    src/monique_ui_GlobalSettings.cpp
+    src/monique_ui_LookAndFeel.cpp
+    src/monique_ui_MFOPopup.cpp
+    src/monique_ui_MIDIIO.cpp
+    src/monique_ui_MainWindow.cpp
+    src/monique_ui_MidiLearnPopup.cpp
+    src/monique_ui_ModulationSlider.cpp
+    src/monique_ui_Morph.cpp
+    src/monique_ui_OptionPopup.cpp
+    src/monique_ui_Overlay.cpp
+    src/monique_ui_Playback.cpp
+    src/monique_ui_Refresher.cpp
+    src/monique_ui_SegmentedMeter.cpp
+    src/mono_AudioDeviceManager.cpp
 )
 
 juce_add_binary_data(MoniqueMonosynth_BinaryData
   SOURCES
-    Files/A.zip
-    Files/DARK.mcol
-    "Files/FACTORTY DEFAULT.mlprog"
-    Files/Themes.zip
-    Fonts/SourceCodePro-Medium.otf
-    Fonts/lato/Lato-Semibold.ttf
-    Icon/monique_512x512.png
-    Icon/monique_desktop_icon_1024x1024.png
+    resources/patches/A.zip
+    resources/files/DARK.mcol
+    "resources/patches/FACTORTY DEFAULT.mlprog"
+    resources/themes/Themes.zip
+    resources/fonts/SourceCodePro-Medium.otf
+    resources/fonts/lato/Lato-Semibold.ttf
+    resources/icon/monique_512x512.png
+    resources/icon/monique_desktop_icon_1024x1024.png
 )
 
 target_link_libraries(${PROJECT_NAME}
